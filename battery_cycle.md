@@ -58,7 +58,7 @@ Add this as a separate file (e.g., `templates/battery_cycles.yaml`) or directly 
 - sensor:
     - name: "Battery Cycle Count"
       unit_of_measurement: "cycles"
-      state_class: total_increasing
+      state_class: measurement
       state: >
         {% set charged = states('sensor.battery_total_energy_charged') | float(0) %}
         {% set discharged = states('sensor.battery_total_energy_discharged') | float(0) %}
